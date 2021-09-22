@@ -1,44 +1,9 @@
-let snake;
-
-function setup () {
-  createCanvas(400, 400);
-  snake = new Snake();
-}
-
-function draw () {
-  background (220)
-  Snake.update();
-  Snake.show();
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class Snake{
+  constructor(x, y, w, h, vx, vy){
+    this.x = x;
+    this.y = y;
+    this.w = w
+    this.h = h
+    this.vx = vx;
+    this.vy = vy;
+  }
