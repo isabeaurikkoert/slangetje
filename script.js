@@ -27,17 +27,13 @@ class Snake{
 }
 
 function keyPressed() {
-  if (keyCode === UP_ARROW) {
-    this.y = this.y - 10;
-  } else if (keyCode === DOWN_ARROW) {
-   this.y = this.y + 10;
-  }
-  if (keyCode === LEFT_ARROW) {
-    this.x = this.x - 5;
-  } else if (keyCode === RIGHT_ARROW) {
-    this.x = this.x + 5;
-  }
-  
+  switch (keyCode) {
+   case 37:
+   case 65:
+    xspeed = -2;
+  case 39:
+  case 68:
+    xspeed = 2;
 }
 
 
