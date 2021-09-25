@@ -10,11 +10,10 @@ class Snake{
 
   drawSnake(){	
 
-    square(this.x, this.y, 50, 50);
+    square(this.vx, this.vy, 50, 50);
 
-    this.x=this.x+this.vx;
-    this.y=this.y+this.vy;
-
+    this.x=this.x*this.vx;
+    this.y=this.y*this.vy;
     
   }
   
@@ -22,26 +21,24 @@ class Snake{
 }
 
 function keyPressed() {
-  switch (keyCode) {
-   case 37:
-   case 65:
-    this.vx = -2;
-  case 39:
-  case 68:
-    this.vx = 2;
+    if(keyCode === 39){
+      this.vx=this.vx*1;
+    }
+    if(keyCode === 37){
+      this.vx=this.vx*-1;
+    }
   }
-}
+
 
 function keyRelease() {
-  switch (keyCode) {
-   case 37:
-   case 65:
-    this.vx = 0;
-  case 39:
-  case 68:
-    this.vx = 0;
+   if(keyCode === 39){
+      this.vx= 0;
+    }
+    if(keyCode === 37){
+      this.vx= 0;
+    }
   }
-}
+
 
 
 function setup() {
