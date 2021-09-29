@@ -20,12 +20,14 @@ class Snake {
 
 
 }
-
+function preload() {
+  img1 = loadImage('imgh/seamless-textured-grass-background-on-lawn-vector-30229922.jpg');
+}
 var snake;
 
 function setup() {
-  createCanvas(500, 400);
-
+  createCanvas(500, 300);
+  background(img1);
   snake = new Snake(30, 30, 30, 30, 2, 0);
 }
 
