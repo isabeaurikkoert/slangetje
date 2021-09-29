@@ -1,5 +1,5 @@
-class Snake{
-  constructor(x, y, w, h, vx, vy){
+class Snake {
+  constructor(x, y, w, h, vx, vy) {
     this.x = x;
     this.y = y;
     this.w = w
@@ -8,46 +8,49 @@ class Snake{
     this.vy = vy;
   }
 
-  drawSnake(){	
+  drawSnake() {
 
-    square(this.vx, this.vy, 50, 50);
+    square(this.x, this.y, 50, 50);
 
-    this.x=this.x*this.vx;
-    this.y=this.y*this.vy;
-    
+    this.x = this.x + this.vx;
+    this.y = this.y + this.vy;
+
   }
-  
+
 
 }
 
-function keyPressed() {
-    if(keyCode === 39){
-      this.vx=this.vx*1;
-    }
-    if(keyCode === 37){
-      this.vx=this.vx*-1;
-    }
-  }
-
-
-function keyRelease() {
-   if(keyCode === 39){
-      this.vx= 0;
-    }
-    if(keyCode === 37){
-      this.vx= 0;
-    }
-  }
-
-
+var snake;
 
 function setup() {
-	createCanvas(500, 400);
+  createCanvas(500, 400);
 
-  snake = new Snake(30,30,30,30,0,0);
+  snake = new Snake(30, 30, 30, 30, 2, 0);
 }
 
 function draw() {
-	background(225);
-	snake.drawSnake();
+  background(225);
+  snake.drawSnake();
+}
+
+function keyPressed() {
+  console.log(keyCode);
+
+  if(keyCode == 40){
+    snake.vx = 0;
+    snake.vy = 2;
   }
+  if(keyCode == 37){
+    snake.vx = -2;
+    snake.vy = 0;
+  }
+  if(keyCode == 38){
+    snake.vx = 0;
+    snake.vy = -2;
+  }
+  if(keyCode == 39){
+    snake.vx = 2;
+    snake.vy = 0;
+  }
+}
+
