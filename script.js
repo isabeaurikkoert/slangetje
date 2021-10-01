@@ -10,7 +10,7 @@ class Snake {
 
   drawSnake() {
 
-    rect(this.x, this.y, 40, 20, 20);
+    circle(this.x, this.y, 10, 10);
     fill(0,216,0);
 
     this.x = this.x + this.vx;
