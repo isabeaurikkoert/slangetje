@@ -24,15 +24,20 @@ function preload() {
   img1 = loadImage('imgh/gras.jpg');
 }
 var snake;
+var eten;
 
 function setup() {
   createCanvas(500, 300);
   snake = new Snake(30, 30, 30, 30, 2, 0);
+  eten = createVector(random(width), random(height));
 }
 
 function draw() {
   background(img1);
   snake.drawSnake();
+
+  fill(255,0,100);
+  rect(eten.x, eten.y, 10, 10);
 }
 
 function keyPressed() {
