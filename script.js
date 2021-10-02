@@ -6,6 +6,15 @@ class Snake {
     this.h = h
     this.vx = vx;
     this.vy = vy;
+
+    this.eat = function(pos){
+      var d = dist(this.x, this.y, pos.x, pos.y);
+      if (d < 1) {
+        return true;
+      } else {
+        return false;
+      }
+    }
    }
   
   drawSnake(){
