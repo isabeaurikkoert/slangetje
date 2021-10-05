@@ -19,13 +19,17 @@ class Snake {
     
 
     if (this.x + 10 > eten.x && this.x < eten.x + 10) {
-      this.c = "red";
+     if (this.y + 10 > eten.y && this.y < eten.y + 10){ 
+        this.c = "red";
+      }
     }
+    
     else{
-      this.c = "white";
+        this.c = "white";
     }
+    
 
-  }
+}
 
 
 }
