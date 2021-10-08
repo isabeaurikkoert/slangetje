@@ -22,11 +22,11 @@ class Snake {
      if (this.y + 10 > eten.y && this.y < eten.y + 10){ 
         this.c = "red";
       }
-    }
-    
-    else{
+      else{
         this.c = "white";
     }
+    }
+    
     
 
 }
