@@ -1,3 +1,7 @@
+var gameState = 0;
+
+
+
 class Snake {
   constructor(x, y, w, h, vx, vy) {
     this.x = x;
@@ -51,9 +55,46 @@ function draw() {
 
   fill(255, 0, 100);
   rect(eten.x, eten.y, 10, 10);
+ 
+ 
+ text("gameState" + gameState, 25, 25);
 
+  if (gameState == 0) {
+    menu();
+  }
+
+  if (gameState == 1) {
+    game();
+  }
+
+  if (gameState == 2) {
+    gameOver();
+  }
 
 }
+
+var x = 0;
+
+function menu() {
+  background("#ababab");
+  text("MENU", 25, 45);
+  text("1. start", 25, 65);
+  text("2. game over", 25, 85);
+  text("3. terug naar menu", 25, 105);
+}
+
+function game() {
+  background("Pink");
+  text("Snake Game", 25, 45);
+  }
+
+
+function gameOver() {
+  background("green");
+  text("GAME OVER", 25, 45);
+  x = 0;
+}
+
 
 function keyPressed() {
   console.log(keyCode);
@@ -73,6 +114,17 @@ function keyPressed() {
   if (keyCode == 39) {
     snake.vx = 2;
     snake.vy = 0;
+  }
+  if (keyCode == 49) {
+    gameState = 1;
+  }
+
+  if (keyCode == 50) {
+    gameState = 2;
+  }
+
+  if (keyCode == 51) {
+    gameState = 0;
   }
 }
 
