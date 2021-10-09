@@ -85,6 +85,9 @@ function game() {
 
   fill(255, 0, 100);
   rect(eten.x, eten.y, 10, 10);
+  if(this.x = 10 > 500){
+    gameState = 2;
+  }
   }
 
 
