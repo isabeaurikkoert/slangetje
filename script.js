@@ -50,12 +50,6 @@ function setup() {
 }
 
 function draw() {
-  background(img1);
-  snake.drawSnake();
-
-  fill(255, 0, 100);
-  rect(eten.x, eten.y, 10, 10);
- 
  
  text("gameState" + gameState, 25, 25);
 
@@ -76,7 +70,7 @@ function draw() {
 var x = 0;
 
 function menu() {
-  background("#ababab");
+  background("pink");
   text("MENU", 25, 45);
   text("1. start", 25, 65);
   text("2. game over", 25, 85);
@@ -84,15 +78,20 @@ function menu() {
 }
 
 function game() {
-  background("Pink");
   text("Snake Game", 25, 45);
+
+  background(img1);
+  snake.drawSnake();
+
+  fill(255, 0, 100);
+  rect(eten.x, eten.y, 10, 10);
   }
 
 
 function gameOver() {
   background("green");
   text("GAME OVER", 25, 45);
-  x = 0;
+  x = 500;
 }
 
 
