@@ -46,7 +46,7 @@ var eten;
 function setup() {
   createCanvas(500, 300);
   snake = new Snake(30, 30, 30, 30, 2, 0);
-  eten = createVector(random(width), random(height));
+  eten = createVector(random(450), random(250));
 }
 
 function draw() {
@@ -78,7 +78,6 @@ function menu() {
 }
 
 function game() {
-  text("Snake Game", 25, 45);
 
   background(img1);
   snake.drawSnake();
