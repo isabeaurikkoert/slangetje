@@ -70,11 +70,10 @@ function draw() {
 var x = 0;
 
 function menu() {
-  background("pink");
-  text("MENU", 25, 45);
-  text("1. start", 25, 65);
-  text("2. game over", 25, 85);
-  text("3. terug naar menu", 25, 105);
+  background(238,211,229);
+  textSize(30);
+  text("press ENTER to play", 100, 150);
+  fill(255,20,147)
 }
 
 function game() {
@@ -84,15 +83,15 @@ function game() {
 
   fill(255, 0, 100);
   rect(eten.x, eten.y, 10, 10);
-  if(this.x = 10 > 500){
-    gameState = 2;
-  }
+  
   }
 
 
 function gameOver() {
-  background("green");
-  text("GAME OVER", 25, 45);
+  background(img1);
+  textSize(30);
+  text("GAME OVER", 160, 150);
+  fill("black")
   x = 500;
 }
 
@@ -116,7 +115,7 @@ function keyPressed() {
     snake.vx = 2;
     snake.vy = 0;
   }
-  if (keyCode == 49) {
+  if (keyCode == 13) {
     gameState = 1;
   }
 
