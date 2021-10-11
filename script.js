@@ -83,6 +83,9 @@ function game() {
 
   fill(255, 0, 100);
   rect(eten.x, eten.y, 10, 10);
+  if(snake.x > 500 || snake.x < 0 || snake.y > 300 || snake.y < 0){
+    gameState = 2;
+  }
   
   }
 
