@@ -23,11 +23,9 @@ class Snake {
     
 
     if (this.x + 10 > eten.x && this.x < eten.x + 10 && this.y + 10 > eten.y && this.y < eten.y + 10) { 
-        this.c = "red";
+      eten = createVector(random(450), random(250));
       }
-      else{
-        this.c = "white";
-    }
+      
     }
     
     
