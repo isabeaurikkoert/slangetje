@@ -23,7 +23,7 @@ class Snake {
 
     if (this.x + 10 > eten.pos.x && this.x < eten.pos.x + 10 && this.y + 10 > eten.pos.y && this.y < eten.pos.y + 10) {
       eten = new Food();
-      // score ++
+      score += 1;
     }
   }
 }
@@ -50,6 +50,7 @@ function setup() {
   createCanvas(500, 300);
   snake = new Snake(30, 30, 30, 30, 2, 0);
   eten = new Food();
+  score = 0
 }
 
 function draw() {
@@ -84,6 +85,10 @@ function game() {
   background(img1);
   snake.drawSnake();
   eten.draw();
+  fill("black");
+  text( "score: " + score, 30, 50);
+  textSize(14);
+  
 
   if (snake.x > 500 || snake.x < 0 || snake.y > 300 || snake.y < 0) {
     gameState = 2;
