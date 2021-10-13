@@ -28,6 +28,18 @@ class Snake {
   }
 }
 
+class Food {
+  constructor () {
+    this.pos = createVector(random(450), random(250));
+  }
+
+  draw() {
+    fill(255, 0, 100);
+    rect(this.pos.x, this.pos.y, 10, 10);
+
+  }
+}
+
 function preload() {
   img1 = loadImage('imgh/gras.jpg');
 }
