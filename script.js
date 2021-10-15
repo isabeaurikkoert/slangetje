@@ -49,7 +49,7 @@ var eten;
 
 function setup() {
   createCanvas(500, 300);
-  snake = new Snake(30, 30, 30, 30, 2, 0);
+  snake = new Snake(30, 30, 30, 30, 5, 0);
   eten = new Food();
   score = 0
 }
@@ -113,18 +113,18 @@ function keyPressed() {
 
   if (keyCode == 40) {
     snake.vx = 0;
-    snake.vy = 2;
+    snake.vy = 5;
   }
   if (keyCode == 37) {
-    snake.vx = -2;
+    snake.vx = -5;
     snake.vy = 0;
   }
   if (keyCode == 38) {
     snake.vx = 0;
-    snake.vy = -2;
+    snake.vy = -5;
   }
   if (keyCode == 39) {
-    snake.vx = 2;
+    snake.vx = 5;
     snake.vy = 0;
   }
   if (keyCode == 13) {
