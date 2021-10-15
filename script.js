@@ -14,14 +14,14 @@ class Snake {
 
   drawSnake() {
 
-    fill(this.c);
-    rect(this.x, this.y, 10, 10);
+  
+    image(slang, this.x, this.y, 30, 30);
 
     this.x = this.x + this.vx;
     this.y = this.y + this.vy;
 
 
-    if (this.x + 10 > eten.pos.x && this.x < eten.pos.x + 10 && this.y + 10 > eten.pos.y && this.y < eten.pos.y + 10) {
+    if (this.x + 30 > eten.pos.x && this.x < eten.pos.x + 30 && this.y + 30 > eten.pos.y && this.y < eten.pos.y + 30) {
       eten = new Food();
       score += 1;
     }
@@ -34,14 +34,15 @@ class Food {
   }
 
   draw() {
-    fill(255, 0, 100);
-    rect(this.pos.x, this.pos.y, 10, 10);
+    image(appel,this.pos.x, this.pos.y, 30, 30);
 
   }
 }
 
 function preload() {
   img1 = loadImage('imgh/gras.jpg');
+  appel = loadImage('imgh/appel.png');
+  slang = loadImage('imgh/slang.png');
 }
 var snake;
 var eten;
@@ -102,7 +103,8 @@ function gameOver() {
   textSize(30);
   text("GAME OVER", 160, 150);
   fill("black")
-  x = 500;
+  x = 500;3
+
 }
 
 
