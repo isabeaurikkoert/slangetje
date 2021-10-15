@@ -21,7 +21,7 @@ class Snake {
     this.y = this.y + this.vy;
 
 
-    if (this.x + 30 > eten.pos.x && this.x < eten.pos.x + 30 && this.y + 30 > eten.pos.y && this.y < eten.pos.y + 30) {
+    if (this.x + 20 > eten.pos.x && this.x < eten.pos.x + 30 && this.y + 20 > eten.pos.y && this.y < eten.pos.y + 30) {
       eten = new Food();
       score += 1;
     }
